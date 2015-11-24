@@ -71,7 +71,7 @@ void parser(const char * filename) {
 					GLfloat num = (GLfloat)strtof(temp2, &temp2);
 					lightsData[lightsNum][i] = num;	
 					printf("%f ", lightsData[lightsNum][i]);
-				}
+				} // asd asdasd
 				printf("\n");
 				lightsNum++;
 			}
