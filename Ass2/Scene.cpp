@@ -1,31 +1,34 @@
 #include "Scene.h"
 #include "Camera.h"
 
+
 Scene::Scene() {
 
 }
 
-Scene::Scene(Point center, Vector3f up, int w, int x, int y, Light* light, Camera* cam) {
+Scene::Scene(Point center, Vector3f up, GLfloat w, GLfloat x, GLfloat y, Light* light, Camera* cam) {
 
 	screenCenter.x = center.x;
 	screenCenter.y = center.y;
 	screenCenter.z = center.z;
 
-	upVector.x = upVector.x;
-	upVector.y = upVector.y;
-	upVector.z = upVector.z;
+	upVector.x = up.x;
+	upVector.y = up.y;
+	upVector.z = up.z;
 	upVector.normalize();
 
-
+	toVector.fromTo(screenCenter, cam->center);
+	toVector.normalize();
+	rightVector = Vector3f::crossProduct(upVector, toVector);
 
 	width = w;
+
 	Rx = x;
 	Ry = y;
+	printf("!@ %d %d %d !@", width, Rx, Ry);
 	ambient = light;
 	camera = cam;
 
-	toVector.fromTo(screenCenter, camera->center);
-	toVector.normalize();
 
 }
 
@@ -36,6 +39,7 @@ void Scene::addLight(Light* light) {
 void Scene::addObject(SceneObject* object) {
 	objects.push_back(object);
 }
+
 
 Scene::~Scene() {
 

@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "glut.h"
 #include "Vector3f.h"
+#include "Ray.h"
 
 
 using namespace std;
@@ -16,5 +17,8 @@ public:
 	Ambient();
 	Ambient(Vector3f rgb);
 	~Ambient();
+	Vector3f calcDiffuseSpeculareColor(Scene* scene, Ray& ray, Ray& lightRay, Intersection* inter);
+	void constructRayToLight(Ray& lightRay, Intersection* inter);
+	string getName();
 
 };

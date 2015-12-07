@@ -10,6 +10,7 @@ Light::Light(Vector3f rgb) {
 	RGB.x = rgb.x;
 	RGB.y = rgb.y;
 	RGB.z = rgb.z;
+
 }
 
 Light::~Light() {

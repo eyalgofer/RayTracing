@@ -124,6 +124,7 @@
     <ClCompile Include="Ambient.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Directional.cpp" />
+    <ClCompile Include="Intersection.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="Ambient.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Directional.h" />
+    <ClInclude Include="Intersection.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Ray.h" />

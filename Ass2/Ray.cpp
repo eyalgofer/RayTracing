@@ -4,7 +4,7 @@ typedef Vector3f Point;
 
 Ray::Ray(){
 	source = Point();
-	vector = Point();
+	vector = Vector3f();
 	length = 0;
 }
 
